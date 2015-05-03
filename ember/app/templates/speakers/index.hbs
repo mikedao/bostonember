@@ -1,5 +1,7 @@
 {{#each}}
-  {{link-to name 'speakers.show' this}}
+ {{~#link-to 'speakers.show' this}}
+   {{name}} ({{presentations.length}})
+ {{~/link-to}}
 {{/each}}
 <p><em>This is speakers/index.hbs</em></p>
 {{outlet}}
