@@ -1,6 +1,14 @@
-{{#each}}
+<section id="new-speaker">
+  <h2>Add a New speaker</h2>
+  <form class="new-speaker-form">
+    <label>Title</label>
+    <input type="text" placeholder="Name" class="new-speaker-name">
+    <input type="submit" value="Add A New Speaker">
+  </form>
+</section>
+{{#each }}
  {{~#link-to 'speakers.show' this}}
-   {{name}} ({{presentations.length}})
+ <p>{{name}} ({{presentations.length}})</p>
  {{~/link-to}}
 {{/each}}
 <p><em>This is speakers/index.hbs</em></p>
