@@ -12,6 +12,13 @@ class Api::SpeakersController < ApplicationController
     render json: @speaker
   end
 
+  def destroy
+    Speaker.find(params[:id]).destroy
+    render json: {}, status: 200
+  end
+
+  private
+
   def speaker_params
     params.require(:speaker).permit(:name)
   end

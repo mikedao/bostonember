@@ -1,0 +1,8 @@
+ {{~#link-to 'speakers.show' this}}
+ <p>{{speaker.name}} ({{speaker.presentations.length}})
+   <div class="buttons">
+    <button class="delete" {{action 'delete'}}>Delete</button>
+  </div>
+  </p>
+ {{~/link-to}}
+{{yield}}
