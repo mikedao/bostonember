@@ -1,3 +1,11 @@
 <h3>Speakers</h3>
+<section id="new-speaker">
+  <h2>Add a New speaker</h2>
+  <form class="new-speaker-form">
+    <label>name</label>
+    {{input type="text" placeholder="Name" class="new-speaker-name" value=name}}
+    <input type="submit" value="Add A New Speaker" {{action 'addNewSpeaker'}}>
+  </form>
+</section>
 <p><em>This part above is in speakers.hbs</em></p>
 {{outlet}}
