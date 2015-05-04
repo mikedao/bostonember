@@ -1,8 +1,14 @@
- {{~#link-to 'speakers.show' speaker}}
- <p>{{speaker.name}} ({{speaker.presentations.length}})
-   <div class="buttons">
-    <button class="delete" {{action 'delete'}}>Delete</button>
-  </div>
-  </p>
- {{~/link-to}}
+{{~#link-to 'speakers.show' speaker}}
+{{speaker.name}} ({{speaker.presentations.length}})
+{{~/link-to}}
+<div class="buttons">
+  <button class="edit" {{action 'edit'}}>Edit</button>
+  <button class="delete" {{action 'delete'}}>Delete</button>
+</div>
+{{#if editing}}
+<form class="edit-name-form">
+  <label>Name</label>
+  {{input type="text" placeholder="Name" class="speaker-name" value=speaker.name}}
+</form>
+{{/if}}
 {{yield}}

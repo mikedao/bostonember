@@ -17,6 +17,11 @@ class Api::SpeakersController < ApplicationController
     render json: {}, status: 200
   end
 
+  def update
+    @speaker = Speaker.find(params[:id])
+    @speaker.update(speaker_params)
+    render json: @speaker
+  end
   private
 
   def speaker_params
