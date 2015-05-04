@@ -6,6 +6,6 @@ export default Ember.Controller.extend({
       addNewSpeaker: function () {
         let speaker = this.getProperties('name');
         this.store.createRecord('speaker', speaker).save();
-         }
+         },
        }
 });
